@@ -25,18 +25,13 @@ class CfgVehicles
 		itemSize[]={5,15};
 		itemBehaviour=0;
 		stackedUnit="ml";
-		randomQuantity=2;
-		varQuantityInit=0;
-		varQuantityMin=0;
-		varQuantityMax=200000;
-		absorbency=0;
 		physLayer="item_large";
-		allowOwnedCargoManipulation=1;
+		allowOwnedCargoManipulation=0;
 
         class Cargo
 		{
-			itemsCargoSize[]={10,15};
-			openable=0;
+			itemsCargoSize[]={10,20};
+			openable=1;
 			allowOwnedCargoManipulation=1;
 		};
     };
