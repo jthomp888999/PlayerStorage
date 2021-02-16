@@ -37,7 +37,6 @@ class CfgVehicles
 			"Mask",
 			"Eyewear",
 			"Hands",
-			"LeftHand",
 			"Gloves",
 			"Armband",
 			"Vest",
