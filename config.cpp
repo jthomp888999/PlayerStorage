@@ -45,12 +45,13 @@ class CfgVehicles
 			"Back",
 			"Hips",
 			"Legs",
-			"Feet"
+			"Feet",
+			"WalkieTalkie"
 		};
 
         class Cargo
 		{
-			itemsCargoSize[]={10,20};
+			itemsCargoSize[]={10,7};
 			openable=1;
 			allowOwnedCargoManipulation=1;
 		};
