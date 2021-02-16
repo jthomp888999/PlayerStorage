@@ -12,6 +12,7 @@ class CfgPatches
 	};
 };
 
+// Defining base class for all custom lockers
 class CfgVehicles
 {
 	class Inventory_Base;
@@ -54,6 +55,7 @@ class CfgVehicles
 			allowOwnedCargoManipulation=1;
 		};
 
+		// This may not work
 		class AnimationSources
 		{
 			class Lid
@@ -70,6 +72,8 @@ class CfgVehicles
 			};
 		};
     };
+
+	// Definfing any locker color we'd like to use
 	class Craftable_Locker_Blue: Craftable_Locker_Color_Base
 	{
 		scope=2;
