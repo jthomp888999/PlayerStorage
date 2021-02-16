@@ -78,7 +78,7 @@ class CfgVehicles
 	class Craftable_Locker_Blue: Craftable_Locker_Color_Base
 	{
 		scope=2;
-		color="Blue"
+		color="Blue";
 		hiddenSelectionsTextures[]=
 		{
 			"\dz\structures\furniture\cases\locker\data\locker_blue_co.paa"
