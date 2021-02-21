@@ -1,13 +1,35 @@
 class CfgPatches
 {
-	class Craftable_locker
+	class LockerMod
 	{
-		units[]={};
-		weapons[]={};
-		requiredVersion=0.1;
 		requiredAddons[]=
 		{
 			"dz_Data"
+		};
+	};
+};
+
+class CfgMods			// required in pbo's which add/modify scripts or inputs
+{
+	class LockerMod
+	{
+		type = "mod";										// required
+
+		class defs
+		{
+			/*
+			script module config classes are optional, define only what you want to mod
+			class gameLibScriptModule
+			{
+				value="";
+				files[]={"mods/testmod/scripts/2_GameLib"};
+			};*/
+
+			class worldScriptModule
+			{
+				value="";
+				files[]={"craftable_locker/scripts/4_World"};
+			};
 		};
 	};
 };
