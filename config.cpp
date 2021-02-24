@@ -69,22 +69,6 @@ class CfgVehicles
 			allowOwnedCargoManipulation=1;
 		};
 
-		// This may not work
-		class AnimationSources
-		{
-			class Lid
-			{
-				source="user";
-				initPhase=0;
-				animPeriod=0.0099999998;
-			};
-			class Lid2
-			{
-				source="user";
-				initPhase=1;
-				animPeriod=0.0099999998;
-			};
-		};
     };
 
 	// Definfing any locker color we'd like to use
