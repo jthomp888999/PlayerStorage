@@ -12,7 +12,7 @@ class CraftLocker extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		m_MinQuantityIngredient[0] = 10;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
@@ -58,6 +58,10 @@ class CraftLocker extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
+		if ( ingredients[0].GetInventory().IsAttachment() )
+			return false;
+		if ( ingredients[1].GetInventory().IsAttachment() )
+			return false;
 		return true;
 	}
 
