@@ -43,7 +43,7 @@ class CraftLocker extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("Craftable_Locker_Blue");//add results here
+		AddResult("Craftable_Locker");//add results here
 
 		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
