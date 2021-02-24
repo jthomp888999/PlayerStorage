@@ -4,7 +4,7 @@ class CfgPatches
 	{
 		requiredAddons[]=
 		{
-			"DZ_Data",
+			"DZ_Data"
 		};
 	};
 };
@@ -14,13 +14,14 @@ class CfgMods
 	class LockerMod
 	{
 		type = "mod";
+		dependencies[] = {"world"};
 
 		class defs
 		{
 			class worldScriptModule
 			{
 				value="";
-				files[]={"craftable_locker/scripts/4_World"};
+				files[]={"\craftable_locker\scripts\4_World"};
 			};
 		};
 	};
