@@ -4,27 +4,19 @@ class CfgPatches
 	{
 		requiredAddons[]=
 		{
-			"dz_Data"
+			"DZ_Data",
 		};
 	};
 };
 
-class CfgMods			// required in pbo's which add/modify scripts or inputs
+class CfgMods
 {
 	class LockerMod
 	{
-		type = "mod";										// required
+		type = "mod";
 
 		class defs
 		{
-			/*
-			script module config classes are optional, define only what you want to mod
-			class gameLibScriptModule
-			{
-				value="";
-				files[]={"mods/testmod/scripts/2_GameLib"};
-			};*/
-
 			class worldScriptModule
 			{
 				value="";
@@ -33,6 +25,7 @@ class CfgMods			// required in pbo's which add/modify scripts or inputs
 		};
 	};
 };
+
 
 // Defining base class for all custom lockers
 class CfgVehicles
@@ -58,7 +51,6 @@ class CfgVehicles
 			"Headgear",
 			"Mask",
 			"Eyewear",
-			"Hands",
 			"Gloves",
 			"Armband",
 			"Vest",
