@@ -10,13 +10,13 @@ class CraftLocker extends RecipeBase
 		
 		//conditions
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
-		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		m_MaxDamageIngredient[0] = -1;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 1;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
-		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		m_MaxDamageIngredient[1] = -1;//-1 = disable check
 		
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
@@ -29,7 +29,7 @@ class CraftLocker extends RecipeBase
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -1;// 0 = do nothing
-		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
@@ -38,7 +38,7 @@ class CraftLocker extends RecipeBase
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1;// -1 = do nothing
 		m_IngredientAddQuantity[1] = -1;// 0 = do nothing
-		m_IngredientDestroy[1] = -1;// false = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
 		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -56,17 +56,13 @@ class CraftLocker extends RecipeBase
 
 	}
 
-	// override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	// {
-	// 	if ( ingredients[0].GetInventory().IsAttachment() )
-	// 		return false;
-	// 	if ( ingredients[1].GetInventory().IsAttachment() )
-	// 		return false;
-	// 	return true;
-	// }
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		return true;
+	}
 
-	// override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
-	// {
-	// 	Debug.Log("Recipe Do method called","recipes");
-	// }
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
 };
