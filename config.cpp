@@ -64,12 +64,13 @@ class CfgVehicles
 			"Hips",
 			"Legs",
 			"Feet",
-			"WalkieTalkie"
+			"WalkieTalkie",
+			"tripWireAttachment"
 		};
 
         class Cargo
 		{
-			itemsCargoSize[]={10,7};
+			itemsCargoSize[]={10,3};
 			openable=1;
 			allowOwnedCargoManipulation=1;
 		};
