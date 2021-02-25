@@ -1,32 +1,52 @@
 class CfgPatches
 {
-	class Craftable_locker
+	class LockerMod
 	{
-		units[]={};
-		weapons[]={};
-		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"dz_Data"
+			"DZ_Data"
 		};
 	};
 };
 
+class CfgMods
+{
+	class LockerMod
+	{
+		type = "mod";
+		dependencies[] = {"world"};
+
+		class defs
+		{
+			class worldScriptModule
+			{
+				value="";
+				files[]={"\craftable_locker\scripts\4_World"};
+			};
+		};
+	};
+};
+
+
 // Defining base class for all custom lockers
 class CfgVehicles
 {
-	class Inventory_Base;
 	class Container_Base;
-	class WorldContainer_Base;
-	class Craftable_Locker_Color_Base: Container_Base
+	class Craftable_Locker: Container_Base
 	{
         displayName="Crafted_Locker";
+		scope=2;
 		descriptionShort="simple_crafted_locker";
+		color="Blue";
 		model="\dz\structures\furniture\cases\locker\locker_closed_blue_v1.p3d";
 		weight=10000;
 		itemSize[]={5,15};
 		physLayer="item_large";
 		allowOwnedCargoManipulation=0;
+		hiddenSelectionsTextures[]=
+		{
+			"\dz\structures\furniture\cases\locker\data\locker_blue_co.paa"
+		};
 
 		attachments[]=
 		{
@@ -36,7 +56,6 @@ class CfgVehicles
 			"Headgear",
 			"Mask",
 			"Eyewear",
-			"Hands",
 			"Gloves",
 			"Armband",
 			"Vest",
@@ -55,33 +74,6 @@ class CfgVehicles
 			allowOwnedCargoManipulation=1;
 		};
 
-		// This may not work
-		class AnimationSources
-		{
-			class Lid
-			{
-				source="user";
-				initPhase=0;
-				animPeriod=0.0099999998;
-			};
-			class Lid2
-			{
-				source="user";
-				initPhase=1;
-				animPeriod=0.0099999998;
-			};
-		};
     };
-
-	// Definfing any locker color we'd like to use
-	class Craftable_Locker_Blue: Craftable_Locker_Color_Base
-	{
-		scope=2;
-		color="Blue";
-		hiddenSelectionsTextures[]=
-		{
-			"\dz\structures\furniture\cases\locker\data\locker_blue_co.paa"
-		};
-	};
 
 };
