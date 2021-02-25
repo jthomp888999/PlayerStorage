@@ -5,4 +5,4 @@ modded class PluginRecipesManager 	// modded keyword for modding existing class
 		super.RegisterRecipes();			// call the original jump function so we don't break stuff
 		RegisterRecipe(new CraftLocker);	// our modded recipe
 	}
-}
+};
