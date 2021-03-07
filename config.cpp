@@ -14,14 +14,14 @@ class CfgMods
 	class LockerMod
 	{
 		type = "mod";
-		dependencies[] = {"world"};
+		dependencies[] = {"World"};
 
 		class defs
 		{
 			class worldScriptModule
 			{
 				value="";
-				files[]={"\craftable_locker\scripts\4_World"};
+				files[]={"craftable_locker\scripts\4_World"};
 			};
 		};
 	};
