@@ -1,8 +1,8 @@
 class CfgPatches
 {
-	class LockerMod
+	class CraftableLocker
 	{
-		requiredAddons[]=
+		requiredAddons[] =
 		{
 			"DZ_Data"
 		};
@@ -11,17 +11,24 @@ class CfgPatches
 
 class CfgMods
 {
-	class LockerMod
+	class CraftableLocker
 	{
 		type = "mod";
-		dependencies[] = {"world"};
+		// dependencies[] = 
+		// {
+		// 	"Game", "World", "Mission"
+		// };
 
 		class defs
 		{
 			class worldScriptModule
 			{
 				value="";
-				files[]={"\craftable_locker\scripts\4_World"};
+				files[] = 
+				{
+					"CraftableLocker/scripts/Common",
+					"CraftableLocker/scripts/4_World"
+				};
 			};
 		};
 	};
@@ -36,7 +43,7 @@ class CfgVehicles
 	{
         displayName="Crafted_Locker";
 		scope=2;
-		descriptionShort="simple_crafted_locker";
+		descriptionShort="Simple Crafted Locker";
 		color="Blue";
 		model="\dz\structures\furniture\cases\locker\locker_closed_blue_v1.p3d";
 		weight=10000;
@@ -64,7 +71,8 @@ class CfgVehicles
 			"Hips",
 			"Legs",
 			"Feet",
-			"WalkieTalkie"
+			"WalkieTalkie",
+			"tripWireAttachment"
 		};
 
         class Cargo
