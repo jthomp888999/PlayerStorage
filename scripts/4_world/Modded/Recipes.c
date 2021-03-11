@@ -1,4 +1,4 @@
-modded class PluginRecipesManager	// modded keyword for modding existing class
+modded class PluginRecipesManager 	// modded keyword for modding existing class
 {
 	override void RegisterRecipies()	// overriding existing function
 	{
