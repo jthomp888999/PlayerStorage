@@ -4,20 +4,20 @@ class CfgPatches
 	{
 		requiredAddons[] =
 		{
-			"DZ_Data", "CraftableLocker"
+			"DZ_Data"
 		};
 	};
 };
 
 class CfgMods
 {
-	class CraftrableLocker
+	class CraftableLocker
 	{
 		type = "mod";
-		dependencies[] = 
-		{
-			"Game", "World", "Mission"
-		};
+		// dependencies[] = 
+		// {
+		// 	"Game", "World", "Mission"
+		// };
 
 		class defs
 		{
@@ -26,7 +26,8 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"CraftableLocker\scripts\4_World"
+					"CraftableLocker/scripts/Common",
+					"CraftableLocker/scripts/4_World"
 				};
 			};
 		};
