@@ -21,8 +21,8 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"CraftableLocker/scripts/Common",
-					"CraftableLocker/scripts/4_World"
+					"craftable_locker/scripts/Common",
+					"craftable_locker/scripts/4_World"
 				};
 			};
 		};
