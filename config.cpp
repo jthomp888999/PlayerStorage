@@ -14,11 +14,6 @@ class CfgMods
 	class CraftableLocker
 	{
 		type = "mod";
-		// dependencies[] = 
-		// {
-		// 	"Game", "World", "Mission"
-		// };
-
 		class defs
 		{
 			class worldScriptModule
@@ -48,8 +43,14 @@ class CfgVehicles
 		model="\dz\structures\furniture\cases\locker\locker_closed_blue_v1.p3d";
 		weight=10000;
 		itemSize[]={5,15};
+		itemBehaviour=0;
 		physLayer="item_large";
 		allowOwnedCargoManipulation=0;
+		hiddenSelections[]=
+        {
+            "camoGround"
+        };
+		
 		hiddenSelectionsTextures[]=
 		{
 			"\dz\structures\furniture\cases\locker\data\locker_blue_co.paa"
@@ -78,7 +79,7 @@ class CfgVehicles
         class Cargo
 		{
 			itemsCargoSize[]={10,3};
-			openable=1;
+			openable=0;
 			allowOwnedCargoManipulation=1;
 		};
 
