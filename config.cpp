@@ -73,6 +73,9 @@ class CfgVehicles
 		{
 			"Head",
 			"Shoulder",
+			"Shoulder",
+			"Shoulder",
+			"Shoulder",
 			"Melee",
 			"Headgear",
 			"Mask",
@@ -93,6 +96,53 @@ class CfgVehicles
 			itemsCargoSize[]={10,3};
 			openable=0;
 			allowOwnedCargoManipulation=1;
+		};
+
+		 class GUIInventoryAttachmentsProps
+		{
+			class Base
+			{
+				name="Clothing";
+				description="";
+				attachmentSlots[]=
+				{
+					"Head",
+					"Body",
+					"Legs",
+					"Vest",
+					"Back",
+					"Headgear",
+					"Armband",
+					"Eyewear"
+				};
+				icon="missing";
+			};
+			class Accessories
+			{
+				name="Accessories";
+				description="";
+				attachmentSlots[]=
+				{
+					"Gloves",
+					"Feet",
+					"Hips",
+					"WalkieTalkie"
+				};
+				icon="missing";
+			};
+			class Weapons
+			{
+				name="Weapons";
+				description="";
+				attachmentSlots[]=
+				{
+					"Shoulder",
+					"Shoulder",
+					"Shoulder",
+					"Shoulder"
+				};
+				
+			};
 		};
 
     };
