@@ -72,8 +72,7 @@ class CfgVehicles
 			"Hips",
 			"Legs",
 			"Feet",
-			"WalkieTalkie",
-			"tripWireAttachment"
+			"WalkieTalkie"
 		};
 
         class Cargo
