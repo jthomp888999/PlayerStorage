@@ -40,7 +40,7 @@ class CfgVehicles
 	{
         displayName="Crafted_Locker";
 		scope=2;
-		descriptionShort="Simple Crafted Locker";
+		descriptionShort="Simple Crafted Storage Unit";
 		color="Blue";
 		model="\craftable_locker\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
 		weight=10000;
