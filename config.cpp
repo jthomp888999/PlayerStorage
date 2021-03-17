@@ -42,7 +42,7 @@ class CfgVehicles
 		scope=2;
 		descriptionShort="Simple Crafted Locker";
 		color="Blue";
-		model="\dz\structures\furniture\cases\locker\locker_closed_blue_v1.p3d";
+		model="\craftable_locker\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
 		weight=10000;
 		itemSize[]={5,15};
 		itemBehaviour=2;
@@ -60,10 +60,10 @@ class CfgVehicles
             "camoGround"
         };
 		
-		hiddenSelectionsTextures[]=
-		{
-			"\dz\structures\furniture\cases\locker\data\locker_blue_co.paa"
-		};
+		// hiddenSelectionsTextures[]=
+		// {
+		// 	"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Normal.paa"
+		// };
 
 		attachments[]=
 		{
