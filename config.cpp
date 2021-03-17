@@ -2,6 +2,10 @@ class CfgPatches
 {
 	class CraftableLocker
 	{
+		units[]=
+		{ 
+			"Craftable_Locker" 
+		};
 		requiredAddons[] =
 		{
 			"DZ_Data"
@@ -60,10 +64,10 @@ class CfgVehicles
             "camoGround"
         };
 		
-		// hiddenSelectionsTextures[]=
-		// {
-		// 	"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Normal.paa"
-		// };
+		hiddenSelectionsTextures[]=
+		{
+			"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Normal.paa"
+		};
 
 		attachments[]=
 		{
