@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Normal.paa";
+	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Normal.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_BaseColor.paa";
+	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_BaseColor.paa";
 	uvSource="tex";
 	class uvTransform
 	{
