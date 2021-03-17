@@ -1,2 +1,4 @@
-
+*.bin
 .vscode/settings.json
+*.biprivatekey
+Keys/

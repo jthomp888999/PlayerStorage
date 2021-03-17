@@ -2,6 +2,10 @@ class CfgPatches
 {
 	class CraftableLocker
 	{
+		units[]=
+		{ 
+			"Craftable_Locker" 
+		};
 		requiredAddons[] =
 		{
 			"DZ_Data"
@@ -14,11 +18,6 @@ class CfgMods
 	class CraftableLocker
 	{
 		type = "mod";
-		// dependencies[] = 
-		// {
-		// 	"Game", "World", "Mission"
-		// };
-
 		class defs
 		{
 			class worldScriptModule
@@ -26,8 +25,8 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"CraftableLocker/scripts/Common",
-					"CraftableLocker/scripts/4_World"
+					"craftable_locker/scripts/Common",
+					"craftable_locker/scripts/4_World"
 				};
 			};
 		};
@@ -38,21 +37,36 @@ class CfgMods
 // Defining base class for all custom lockers
 class CfgVehicles
 {
+	class Barrel_ColorBase;
+	class Inventory_Base;
 	class Container_Base;
 	class Craftable_Locker: Container_Base
 	{
         displayName="Crafted_Locker";
 		scope=2;
-		descriptionShort="Simple Crafted Locker";
+		descriptionShort="Simple Crafted Storage Unit";
 		color="Blue";
-		model="\dz\structures\furniture\cases\locker\locker_closed_blue_v1.p3d";
+		model="\craftable_locker\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
 		weight=10000;
 		itemSize[]={5,15};
-		physLayer="item_large";
-		allowOwnedCargoManipulation=0;
+		itemBehaviour=2;
+		canBeDigged = 0;
+        heavyItem = 1;
+        physLayer = "item_large";
+        bounding = "BSphere";
+        carveNavmesh = 1;
+        slopeTolerance = 0.2;
+        yawPitchRollLimit[] = {12,12,12};
+        placement = "ForceSlopeOnTerrain";
+		allowOwnedCargoManipulation=1;
+		hiddenSelections[]=
+        {
+            "camoGround"
+        };
+		
 		hiddenSelectionsTextures[]=
 		{
-			"\dz\structures\furniture\cases\locker\data\locker_blue_co.paa"
+			"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Normal.paa"
 		};
 
 		attachments[]=
@@ -71,14 +85,13 @@ class CfgVehicles
 			"Hips",
 			"Legs",
 			"Feet",
-			"WalkieTalkie",
-			"tripWireAttachment"
+			"WalkieTalkie"
 		};
 
         class Cargo
 		{
 			itemsCargoSize[]={10,3};
-			openable=1;
+			openable=0;
 			allowOwnedCargoManipulation=1;
 		};
 
