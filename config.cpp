@@ -33,6 +33,8 @@ class CfgMods
 // Defining base class for all custom lockers
 class CfgVehicles
 {
+	class Barrel_ColorBase;
+	class Inventory_Base;
 	class Container_Base;
 	class Craftable_Locker: Container_Base
 	{
@@ -43,9 +45,16 @@ class CfgVehicles
 		model="\dz\structures\furniture\cases\locker\locker_closed_blue_v1.p3d";
 		weight=10000;
 		itemSize[]={5,15};
-		itemBehaviour=0;
-		physLayer="item_large";
-		allowOwnedCargoManipulation=0;
+		itemBehaviour=2;
+		canBeDigged = 0;
+        heavyItem = 1;
+        physLayer = "item_large";
+        bounding = "BSphere";
+        carveNavmesh = 1;
+        slopeTolerance = 0.2;
+        yawPitchRollLimit[] = {12,12,12};
+        placement = "ForceSlopeOnTerrain";
+		allowOwnedCargoManipulation=1;
 		hiddenSelections[]=
         {
             "camoGround"
