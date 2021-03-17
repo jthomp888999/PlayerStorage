@@ -40,7 +40,7 @@ class CfgVehicles
 	{
         displayName="Crafted_Locker";
 		scope=2;
-		descriptionShort="Simple Crafted Locker";
+		descriptionShort="Simple Crafted Storage Unit";
 		color="Blue";
 		model="\dz\structures\furniture\cases\locker\locker_closed_blue_v1.p3d";
 		weight=10000;
