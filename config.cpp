@@ -112,8 +112,7 @@ class CfgVehicles
 					"Vest",
 					"Back",
 					"Headgear",
-					"Armband",
-					"Eyewear"
+					"Armband"
 				};
 				icon="missing";
 			};
@@ -126,6 +125,7 @@ class CfgVehicles
 					"Gloves",
 					"Feet",
 					"Hips",
+					"Eyewear",
 					"WalkieTalkie"
 				};
 				icon="missing";
