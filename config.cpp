@@ -145,7 +145,7 @@ class CfgVehicles
 					"Shoulder3",
 					"Shoulder4"
 				};
-				icon="shoulderleft"
+				icon="shoulderleft";
 				
 			};
 		};
