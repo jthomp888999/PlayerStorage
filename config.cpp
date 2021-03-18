@@ -6,6 +6,7 @@ class CfgPatches
 		{ 
 			"Craftable_Locker" 
 		};
+		
 		requiredAddons[] =
 		{
 			"DZ_Data"
@@ -65,7 +66,11 @@ class CfgVehicles
 		
 		hiddenSelectionsTextures[]=
 		{
-			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa"
+			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa",
+			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Glossiness.paa",
+			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Height.paa",
+			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Normal.paa",
+			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Specular.paa"
 		};
 
 		attachments[]=
