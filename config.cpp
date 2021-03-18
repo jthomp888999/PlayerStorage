@@ -76,10 +76,10 @@ class CfgVehicles
 		attachments[]=
 		{
 			"Head",
-			"Shoulder",
-			"Shoulder",
-			"Shoulder",
-			"Shoulder",
+			"Shoulder1",
+			"Shoulder2",
+			"Shoulder3",
+			"Shoulder4",
 			"Melee",
 			"Headgear",
 			"Mask",
@@ -140,11 +140,12 @@ class CfgVehicles
 				description="";
 				attachmentSlots[]=
 				{
-					"Shoulder",
-					"Shoulder",
-					"Shoulder",
-					"Shoulder"
+					"Shoulder1",
+					"Shoulder2",
+					"Shoulder3",
+					"Shoulder4"
 				};
+				icon="shoulderleft"
 				
 			};
 		};
