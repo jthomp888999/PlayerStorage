@@ -45,7 +45,6 @@ class CfgVehicles
         displayName="Crafted_Locker";
 		scope=2;
 		descriptionShort="Simple Crafted Storage Unit";
-		color="Blue";
 		model="\craftable_locker\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
 		weight=10000;
 		itemSize[]={5,15};
@@ -66,7 +65,7 @@ class CfgVehicles
 		
 		hiddenSelectionsTextures[]=
 		{
-			"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Normal.paa"
+			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa"
 		};
 
 		attachments[]=
