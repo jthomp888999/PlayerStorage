@@ -75,12 +75,12 @@ class CfgVehicles
 
 		attachments[]=
 		{
-			"Head",
 			"Shoulder1",
 			"Shoulder2",
 			"Shoulder3",
 			"Shoulder4",
 			"Melee",
+			"Head",
 			"Headgear",
 			"Mask",
 			"Eyewear",
@@ -107,7 +107,6 @@ class CfgVehicles
 			class Base
 			{
 				name="Clothing";
-				description="";
 				attachmentSlots[]=
 				{
 					"Head",
@@ -123,7 +122,6 @@ class CfgVehicles
 			class Accessories
 			{
 				name="Accessories";
-				description="";
 				attachmentSlots[]=
 				{
 					"Gloves",
@@ -137,13 +135,13 @@ class CfgVehicles
 			class Weapons
 			{
 				name="Weapons";
-				description="";
 				attachmentSlots[]=
 				{
 					"Shoulder1",
 					"Shoulder2",
 					"Shoulder3",
-					"Shoulder4"
+					"Shoulder4",
+					"Melee"
 				};
 				icon="shoulderleft";
 				
