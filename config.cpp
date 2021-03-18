@@ -95,13 +95,6 @@ class CfgVehicles
 			"WalkieTalkie"
 		};
 
-        class Cargo
-		{
-			itemsCargoSize[]={10,3};
-			openable=0;
-			allowOwnedCargoManipulation=1;
-		};
-
 		 class GUIInventoryAttachmentsProps
 		{
 			class Base
@@ -146,6 +139,13 @@ class CfgVehicles
 				icon="shoulderleft";
 				
 			};
+		};
+
+		    class Cargo
+		{
+			itemsCargoSize[]={10,3};
+			openable=0;
+			allowOwnedCargoManipulation=1;
 		};
 
     };
