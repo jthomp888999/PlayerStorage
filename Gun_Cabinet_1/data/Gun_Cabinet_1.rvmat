@@ -33,15 +33,15 @@ class Stage2
 	uvSource="tex";
 	class uvTransform
 	{
-		aside[]={0,0,0};
-		up[]={0,0,0};
+		aside[]={1,0,0};
+		up[]={0,1,0};
 		dir[]={0,0,0};
 		pos[]={0,0,0};
 	};
 };
 class Stage3
 {
-	texture="#(argb,8,8,3)color(0,0,0,0,MC)";
+	texture="craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Height.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -53,7 +53,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="#(argb,8,8,3)color(1,1,1,1,AS)";
+	texture="craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Glossiness.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -65,7 +65,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa";
+	texture="craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Specular.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -77,7 +77,7 @@ class Stage5
 };
 class Stage6
 {
-	texture="#(ai,64,64,1)fresnel(0.4,0.7)";
+	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Basecolor.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -89,7 +89,19 @@ class Stage6
 };
 class Stage7
 {
-	texture="#(argb,8,8,3)color(0,0,0,1,CO)";
+	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Metallic.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage8
+{
+	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Roughness.paa";
 	uvSource="tex";
 	class uvTransform
 	{
