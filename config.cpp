@@ -34,6 +34,22 @@ class CfgMods
 	};
 };
 
+class CfgWeapons
+{
+    class RifleCore;
+    class Rifle_Base: RifleCore
+    {
+        inventorySlot[]=
+        {
+            "Shoulder",
+            "Shoulder1",
+            "Shoulder2",
+            "Shoulder3",
+            "Shoulder4",
+
+        };
+    };
+};
 
 // Defining base class for all custom lockers
 class CfgVehicles
@@ -97,7 +113,7 @@ class CfgVehicles
 
 		 class GUIInventoryAttachmentsProps
 		{
-			class Base
+			class Clothing
 			{
 				name="Clothing";
 				attachmentSlots[]=
@@ -141,7 +157,7 @@ class CfgVehicles
 			};
 		};
 
-		    class Cargo
+		class Cargo
 		{
 			itemsCargoSize[]={10,3};
 			openable=0;
