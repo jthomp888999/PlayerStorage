@@ -34,22 +34,46 @@ class CfgMods
 	};
 };
 
-class CfgWeapons
+class CfgSlots
 {
-    class RifleCore;
-    class Rifle_Base: RifleCore
+    class Slot_Gun1
     {
-        inventorySlot[]=
-        {
-            "Shoulder",
-            "Shoulder1",
-            "Shoulder2",
-            "Shoulder3",
-            "Shoulder4",
 
-        };
+        name = "shoulder1";
+        displayName = "shoulder1";
+        ghostIcon = "hips";
+        selection = "shoulder1";
+
     };
-};
+
+    class Slot_Gun2
+    {
+
+        name = "shoulder2";
+        displayName = "shoulder2";
+        ghostIcon = "hips";
+        selection = "shoulder2";
+
+    };
+
+	class Slot_Gun3
+    {
+
+        name = "shoulder3";
+        displayName = "shoulder3";
+        ghostIcon = "hips";
+        selection = "shoulder3";
+
+    };
+
+	class Slot_Gun4
+    {
+
+        name = "shoulder4";
+        displayName = "shoulder4";
+        ghostIcon = "hips";
+        selection = "shoulder4";
+    };
 
 // Defining base class for all custom lockers
 class CfgVehicles
@@ -133,6 +157,7 @@ class CfgVehicles
 					"Feet",
 					"Hips",
 					"Eyewear",
+					"Mask",
 					"WalkieTalkie"
 				};
 				icon="missing";
@@ -146,9 +171,8 @@ class CfgVehicles
 					"Shoulder2",
 					"Shoulder3",
 					"Shoulder4",
-					"Melee"
 				};
-				icon="shoulderleft";
+				icon="shoulderright";
 				
 			};
 		};
