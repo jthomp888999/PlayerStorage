@@ -6,6 +6,15 @@ specular[]={0.12,0.12,0.12,1};
 specularPower=250;
 PixelShaderID="Super";
 VertexShaderID="Super";
+hiddenSelectionsmaterials[]=
+{
+    "\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Glossiness.paa",
+    "\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Height.paa",
+    "\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Specular.paa",
+	"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Basecolor.paa",
+	"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Metallic.paa",
+	"\craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Roughness.paa"
+};
 class Stage1
 {
 	texture="craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Normal.paa";
@@ -20,7 +29,7 @@ class Stage1
 };
 class Stage2
 {
-	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";
+	texture="\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa";
 	uvSource="tex";
 	class uvTransform
 	{
