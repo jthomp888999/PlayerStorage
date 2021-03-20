@@ -18,13 +18,13 @@ class CfgMods
 {
 	class CraftableLocker
 	{
-		type = "mod";
+		type="mod";
 		class defs
 		{
 			class worldScriptModule
 			{
 				value="";
-				files[] = 
+				files[]=
 				{
 					"craftable_locker/scripts/Common",
 					"craftable_locker/scripts/4_World"
@@ -44,11 +44,10 @@ class CfgWeapons
     {
         inventorySlot[]=
         {
-            "Shoulder",
             "Shoulder1",
             "Shoulder2",
             "Shoulder3",
-            "Shoulder4",
+            "Shoulder4"
         };
     };
 
@@ -56,7 +55,6 @@ class CfgWeapons
     {
         inventorySlot[]=
         {
-            "Pistol",
             "Pistol1",
             "Pistol2",
             "Pistol3",
@@ -67,60 +65,60 @@ class CfgWeapons
 
 class CfgSlots
 {
-    class Shoulder1
+    class Slot_Shoulder1
     {
-        name = "Shoulder1";
-        displayName = "Shoulder1";
-        ghostIcon = "shoulderleft";
+        name="Shoulder1";
+        displayName="Shoulder1";
+        ghostIcon="shoulderleft";
     };
 
-    class Shoulder2
+    class Slot_Shoulder2
     {
-        name = "Shoulder2";
-        displayName = "Shoulder2";
-        ghostIcon = "shoulderleft";
+        name="Shoulder2";
+        displayName="Shoulder2";
+        ghostIcon="shoulderleft";
     };
 
-    class Shoulder3
+    class Slot_Shoulder3
     {
-        name = "Shoulder3";
-        displayName = "Shoulder3";
-        ghostIcon = "shoulderleft";
+        name="Shoulder3";
+        displayName="Shoulder3";
+        ghostIcon="shoulderleft";
     };
 
-    class Shoulder4
+    class Slot_Shoulder4
     {
-        name = "Shoulder4";
-        displayName = "Shoulder4";
-        ghostIcon = "shoulderleft";
+        name="Shoulder4";
+        displayName="Shoulder4";
+        ghostIcon="shoulderleft";
     };
 
-    class Pistol1
+    class Slot_Pistol1
     {
-        name = "Pistol1";
-        displayName = "Pistol1";
-        ghostIcon = "pistol";
+        name="Pistol1";
+        displayName="Pistol1";
+        ghostIcon="pistol";
     };
 
-    class Pistol2
+    class Slot_Pistol2
     {
-        name = "Pistol2";
-        displayName = "Pistol2";
-        ghostIcon = "pistol";
+        name="Pistol2";
+        displayName="Pistol2";
+        ghostIcon="pistol";
     };
 
-    class Pistol3
+    class Slot_Pistol3
     {
-        name = "Pistol3";
-        displayName = "Pistol3";
-        ghostIcon = "pistol";
+        name="Pistol3";
+        displayName="Pistol3";
+        ghostIcon="pistol";
     };
 
-    class Pistol4
+    class Slot_Pistol4
     {
-        name = "Pistol4";
-        displayName = "Pistol4";
-        ghostIcon = "pistol";
+        name="Pistol4";
+        displayName="Pistol4";
+        ghostIcon="pistol";
     };
 };
 
@@ -137,14 +135,14 @@ class CfgVehicles
 		weight=10000;
 		itemSize[]={5,15};
 		itemBehaviour=2;
-		canBeDigged = 0;
-        heavyItem = 1;
-        physLayer = "item_large";
-        bounding = "BSphere";
-        carveNavmesh = 1;
-        slopeTolerance = 0.2;
-        yawPitchRollLimit[] = {12,12,12};
-        placement = "ForceSlopeOnTerrain";
+		canBeDigged=0;
+        heavyItem=1;
+        physLayer="item_large";
+        bounding="BSphere";
+        carveNavmesh=1;
+        slopeTolerance=0.2;
+        yawPitchRollLimit[]={12,12,12};
+        placement="ForceSlopeOnTerrain";
 		allowOwnedCargoManipulation=1;
 		attachments[]=
 		{
