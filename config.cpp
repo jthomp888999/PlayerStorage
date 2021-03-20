@@ -44,6 +44,7 @@ class CfgWeapons
         inventorySlot[]=
         {
 			"Shoulder",
+			"Melee"
             "Shoulder1",
             "Shoulder2",
             "Shoulder3",
