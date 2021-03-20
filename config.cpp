@@ -41,7 +41,7 @@ class CfgSlots
 
         name = "shoulder1";
         displayName = "shoulder1";
-        ghostIcon = "hips";
+        ghostIcon = "shoulderleft";
         selection = "shoulder1";
 
     };
@@ -51,7 +51,7 @@ class CfgSlots
 
         name = "shoulder2";
         displayName = "shoulder2";
-        ghostIcon = "hips";
+        ghostIcon = "shoulderleft";
         selection = "shoulder2";
 
     };
@@ -61,7 +61,7 @@ class CfgSlots
 
         name = "shoulder3";
         displayName = "shoulder3";
-        ghostIcon = "hips";
+        ghostIcon = "shoulderleft";
         selection = "shoulder3";
 
     };
@@ -71,15 +71,14 @@ class CfgSlots
 
         name = "shoulder4";
         displayName = "shoulder4";
-        ghostIcon = "hips";
+        ghostIcon = "shoulderleft";
         selection = "shoulder4";
     };
+};
 
 // Defining base class for all custom lockers
 class CfgVehicles
 {
-	class Barrel_ColorBase;
-	class Inventory_Base;
 	class Container_Base;
 	class Craftable_Locker: Container_Base
 	{
@@ -99,11 +98,6 @@ class CfgVehicles
         yawPitchRollLimit[] = {12,12,12};
         placement = "ForceSlopeOnTerrain";
 		allowOwnedCargoManipulation=1;
-		hiddenSelections[]=
-        {
-			
-		};
-		
 		hiddenSelectionsTextures[]=
 		{
 			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa",
@@ -144,6 +138,7 @@ class CfgVehicles
 					"Vest",
 					"Back",
 					"Headgear",
+					"Mask",
 					"Armband"
 				};
 				icon="missing";
@@ -157,7 +152,6 @@ class CfgVehicles
 					"Feet",
 					"Hips",
 					"Eyewear",
-					"Mask",
 					"WalkieTalkie"
 				};
 				icon="missing";
@@ -170,10 +164,9 @@ class CfgVehicles
 					"Shoulder1",
 					"Shoulder2",
 					"Shoulder3",
-					"Shoulder4",
+					"Shoulder4"
 				};
-				icon="shoulderright";
-				
+				icon="shoulderleft";
 			};
 		};
 
