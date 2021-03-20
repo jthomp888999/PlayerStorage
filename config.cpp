@@ -34,26 +34,97 @@ class CfgMods
 	};
 };
 
-class CfgSlots
+class CfgWeapons
 {
-    class Slot_Gun1
+	class DefaultWeapon;
+	class LauncherCore;
+	class RifleCore;
+	class PistolCore;
+    class Rifle_Base: RifleCore
     {
-        name = "shoulder1";
-        displayName = "shoulder1";
-        ghostIcon = "shoulderleft";
-        selection = "shoulder1";
+        inventorySlot[]=
+        {
+            "Shoulder",
+            "Shoulder1",
+            "Shoulder2",
+            "Shoulder3",
+            "Shoulder4",
+        };
     };
 
-    class Slot_Gun2
+    class Pistol_Base: PistolCore
     {
-        name = "shoulder2";
-        displayName = "shoulder2";
-        ghostIcon = "shoulderleft";
-        selection = "shoulder2";
-	};
+        inventorySlot[]=
+        {
+            "Pistol",
+            "Pistol1",
+            "Pistol2",
+            "Pistol3",
+            "Pistol4"
+        };
+    };
 };
 
-// Defining base class for all custom lockers
+class CfgSlots
+{
+    class Shoulder1
+    {
+        name = "Shoulder1";
+        displayName = "Shoulder1";
+        ghostIcon = "shoulder";
+    };
+
+    class Shoulder2
+    {
+        name = "Shoulder2";
+        displayName = "Shoulder2";
+        ghostIcon = "shoulderleft";
+    };
+
+    class Shoulder3
+    {
+        name = "Shoulder3";
+        displayName = "Shoulder3";
+        ghostIcon = "shoulder";
+    };
+
+    class Shoulder4
+    {
+        name = "Shoulder4";
+        displayName = "Shoulder4";
+        ghostIcon = "shoulder";
+    };
+
+    class Pistol1
+    {
+        name = "Pistol1";
+        displayName = "Pistol1";
+        ghostIcon = "shoulder";
+    };
+
+    class Pistol2
+    {
+        name = "Pistol2";
+        displayName = "Pistol2";
+        ghostIcon = "shoulder";
+    };
+
+    class Pistol3
+    {
+        name = "Pistol3";
+        displayName = "Pistol3";
+        ghostIcon = "shoulder";
+    };
+
+    class Pistol4
+    {
+        name = "Pistol4";
+        displayName = "Pistol4";
+        ghostIcon = "shoulder";
+    };
+};
+
+//Pistol base class for all custom lockers
 class CfgVehicles
 {
 	class Container_Base;
@@ -75,16 +146,17 @@ class CfgVehicles
         yawPitchRollLimit[] = {12,12,12};
         placement = "ForceSlopeOnTerrain";
 		allowOwnedCargoManipulation=1;
-		hiddenSelectionsTextures[]=
-		{
-			"\craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa",
-		};
-
 		attachments[]=
 		{
-			"Shoulder"
 			"Shoulder1",
 			"Shoulder2",
+			"Shoulder3",
+			"Shoulder4",
+			"Pistol",
+            "Pistol1",
+            "Pistol2",
+            "Pistol3",
+            "Pistol4",
 			"Melee",
 			"Head",
 			"Headgear",
@@ -114,11 +186,11 @@ class CfgVehicles
 					"Vest",
 					"Back",
 					"Headgear",
-					"Mask",
 					"Armband"
 				};
 				icon="missing";
 			};
+
 			class Accessories
 			{
 				name="Accessories";
@@ -128,21 +200,46 @@ class CfgVehicles
 					"Feet",
 					"Hips",
 					"Eyewear",
+					"Mask",
 					"WalkieTalkie"
 				};
 				icon="missing";
 			};
-			class Weapons
+
+			class Rifles
 			{
-				name="Weapons";
+				name="Rifles";
 				attachmentSlots[]=
 				{
-					"Shoulder",
 					"Shoulder1",
-					"Shoulder2"
-					"Melee",
+					"Shoulder2",
+					"Shoulder3",
+					"Shoulder4"
 				};
-				icon="shoulderleft";
+				icon="missing";
+			};
+
+			class Pistols
+			{
+				name="Pistols";
+				attachmentSlots[]=
+				{
+					"Pistol1",
+					"Pistol2"
+				};
+				icon="missing";
+			};
+
+			class Explosives
+			{
+				name="Explosives";
+				attachmentSlots[]=
+				{
+					"VestGrenadeA",
+					"VestGrenadeB",
+					"VestGrenadeC",
+					"VestGrenadeD"
+				};
 			};
 		};
 
