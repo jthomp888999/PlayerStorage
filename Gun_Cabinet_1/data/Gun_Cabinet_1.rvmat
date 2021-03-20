@@ -38,7 +38,7 @@ class Stage2
 		pos[]={0,0,0};
 	};
 };
-class Stage2
+class Stage3
 {
 	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Metallic.paa";
 	uvSource="tex";
@@ -50,7 +50,7 @@ class Stage2
 		pos[]={0,0,0};
 	};
 };
-class Stage2
+class Stage4
 {
 	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Roughness.paa";
 	uvSource="tex";
@@ -62,7 +62,7 @@ class Stage2
 		pos[]={0,0,0};
 	};
 };
-class Stage2
+class Stage5
 {
 	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Height.paa";
 	uvSource="tex";
