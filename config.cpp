@@ -71,7 +71,7 @@ class CfgSlots
     {
         name = "Shoulder1";
         displayName = "Shoulder1";
-        ghostIcon = "shoulder";
+        ghostIcon = "shoulderleft";
     };
 
     class Shoulder2
@@ -85,42 +85,42 @@ class CfgSlots
     {
         name = "Shoulder3";
         displayName = "Shoulder3";
-        ghostIcon = "shoulder";
+        ghostIcon = "shoulderleft";
     };
 
     class Shoulder4
     {
         name = "Shoulder4";
         displayName = "Shoulder4";
-        ghostIcon = "shoulder";
+        ghostIcon = "shoulderleft";
     };
 
     class Pistol1
     {
         name = "Pistol1";
         displayName = "Pistol1";
-        ghostIcon = "shoulder";
+        ghostIcon = "pistol";
     };
 
     class Pistol2
     {
         name = "Pistol2";
         displayName = "Pistol2";
-        ghostIcon = "shoulder";
+        ghostIcon = "pistol";
     };
 
     class Pistol3
     {
         name = "Pistol3";
         displayName = "Pistol3";
-        ghostIcon = "shoulder";
+        ghostIcon = "pistol";
     };
 
     class Pistol4
     {
         name = "Pistol4";
         displayName = "Pistol4";
-        ghostIcon = "shoulder";
+        ghostIcon = "pistol";
     };
 };
 
@@ -216,7 +216,7 @@ class CfgVehicles
 					"Shoulder3",
 					"Shoulder4"
 				};
-				icon="missing";
+				icon="shoulderleft";
 			};
 
 			class Pistols
@@ -227,7 +227,7 @@ class CfgVehicles
 					"Pistol1",
 					"Pistol2"
 				};
-				icon="missing";
+				icon="pistol";
 			};
 
 			class Explosives
@@ -240,6 +240,7 @@ class CfgVehicles
 					"VestGrenadeC",
 					"VestGrenadeD"
 				};
+				icon="grenade";
 			};
 		};
 
