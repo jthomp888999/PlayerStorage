@@ -165,7 +165,7 @@ class CfgVehicles
 			"VestGrenadeB",
 			"VestGrenadeC",
 			"VestGrenadeD",
-			"Magazine"
+			"Magazine",
 			"Melee",
 			"Head",
 			"Headgear",
