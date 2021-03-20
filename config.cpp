@@ -36,8 +36,6 @@ class CfgMods
 
 class CfgWeapons
 {
-	class DefaultWeapon;
-	class LauncherCore;
 	class RifleCore;
 	class PistolCore;
     class Rifle_Base: RifleCore
@@ -70,6 +68,7 @@ class CfgSlots
         name="Shoulder1";
         displayName="Shoulder1";
         ghostIcon="shoulderleft";
+		show="true";
     };
 
     class Slot_Shoulder2
@@ -77,6 +76,7 @@ class CfgSlots
         name="Shoulder2";
         displayName="Shoulder2";
         ghostIcon="shoulderleft";
+		show="true";
     };
 
     class Slot_Shoulder3
@@ -84,6 +84,7 @@ class CfgSlots
         name="Shoulder3";
         displayName="Shoulder3";
         ghostIcon="shoulderleft";
+		show="true";
     };
 
     class Slot_Shoulder4
@@ -91,6 +92,7 @@ class CfgSlots
         name="Shoulder4";
         displayName="Shoulder4";
         ghostIcon="shoulderleft";
+		show="true";
     };
 
     class Slot_Pistol1
@@ -98,6 +100,7 @@ class CfgSlots
         name="Pistol1";
         displayName="Pistol1";
         ghostIcon="pistol";
+		show="true";
     };
 
     class Slot_Pistol2
@@ -105,6 +108,7 @@ class CfgSlots
         name="Pistol2";
         displayName="Pistol2";
         ghostIcon="pistol";
+		show="true";
     };
 
     class Slot_Pistol3
@@ -112,6 +116,7 @@ class CfgSlots
         name="Pistol3";
         displayName="Pistol3";
         ghostIcon="pistol";
+		show="true";
     };
 
     class Slot_Pistol4
@@ -119,6 +124,7 @@ class CfgSlots
         name="Pistol4";
         displayName="Pistol4";
         ghostIcon="pistol";
+		show="true";
     };
 };
 
