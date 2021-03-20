@@ -21,7 +21,7 @@ class Stage1
 };
 class Stage2
 {
-	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_Basecolor.paa";
+	texture="craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -93,7 +93,7 @@ class Stage7
 };
 class Stage8
 {
-	texture="craftable_locker\Gun_Cabinet_1\data\SpecGloss\test_low_lambert1_Diffuse.paa";
+	texture="craftable_locker\Gun_Cabinet_1\data\MetalRough\test_low_lambert1_BaseColor.paa";
 	uvSource="tex";
 	class uvTransform
 	{
