@@ -38,42 +38,19 @@ class CfgSlots
 {
     class Slot_Gun1
     {
-
         name = "shoulder1";
         displayName = "shoulder1";
         ghostIcon = "shoulderleft";
         selection = "shoulder1";
-
     };
 
     class Slot_Gun2
     {
-
         name = "shoulder2";
         displayName = "shoulder2";
         ghostIcon = "shoulderleft";
         selection = "shoulder2";
-
-    };
-
-	class Slot_Gun3
-    {
-
-        name = "shoulder3";
-        displayName = "shoulder3";
-        ghostIcon = "shoulderleft";
-        selection = "shoulder3";
-
-    };
-
-	class Slot_Gun4
-    {
-
-        name = "shoulder4";
-        displayName = "shoulder4";
-        ghostIcon = "shoulderleft";
-        selection = "shoulder4";
-    };
+	};
 };
 
 // Defining base class for all custom lockers
@@ -105,10 +82,9 @@ class CfgVehicles
 
 		attachments[]=
 		{
+			"Shoulder"
 			"Shoulder1",
 			"Shoulder2",
-			"Shoulder3",
-			"Shoulder4",
 			"Melee",
 			"Head",
 			"Headgear",
@@ -161,10 +137,10 @@ class CfgVehicles
 				name="Weapons";
 				attachmentSlots[]=
 				{
+					"Shoulder",
 					"Shoulder1",
-					"Shoulder2",
-					"Shoulder3",
-					"Shoulder4"
+					"Shoulder2"
+					"Melee",
 				};
 				icon="shoulderleft";
 			};
