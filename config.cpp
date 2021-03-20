@@ -165,6 +165,7 @@ class CfgVehicles
 			"VestGrenadeB",
 			"VestGrenadeC",
 			"VestGrenadeD",
+			"Magazine"
 			"Melee",
 			"Head",
 			"Headgear",
@@ -233,7 +234,7 @@ class CfgVehicles
 				attachmentSlots[]=
 				{
 					"Pistol1",
-					"Pistol2"
+					"Magazine"
 				};
 				icon="pistol";
 			};
