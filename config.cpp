@@ -9,7 +9,8 @@ class CfgPatches
 		
 		requiredAddons[] =
 		{
-			"DZ_Data"
+			"DZ_Data",
+			"DZ_Scripts"
 		};
 	};
 };
@@ -42,6 +43,7 @@ class CfgWeapons
     {
         inventorySlot[]=
         {
+			"Shoulder",
             "Shoulder1",
             "Shoulder2",
             "Shoulder3",
@@ -53,6 +55,7 @@ class CfgWeapons
     {
         inventorySlot[]=
         {
+			"Pistol",
             "Pistol1",
             "Pistol2",
             "Pistol3",
@@ -152,15 +155,13 @@ class CfgVehicles
 		allowOwnedCargoManipulation=1;
 		attachments[]=
 		{
+			"Shoulder",
 			"Shoulder1",
 			"Shoulder2",
 			"Shoulder3",
 			"Shoulder4",
 			"Pistol",
             "Pistol1",
-            "Pistol2",
-            "Pistol3",
-            "Pistol4",
 			"VestGrenadeA",
 			"VestGrenadeB",
 			"VestGrenadeC",
@@ -220,7 +221,7 @@ class CfgVehicles
 				name="Rifles";
 				attachmentSlots[]=
 				{
-					"Shoulder1",
+					"Shoulder",
 					"Shoulder2",
 					"Shoulder3",
 					"Shoulder4"
@@ -233,7 +234,7 @@ class CfgVehicles
 				name="Pistols";
 				attachmentSlots[]=
 				{
-					"Pistol1",
+					"Pistol",
 					"Magazine"
 				};
 				icon="pistol";
