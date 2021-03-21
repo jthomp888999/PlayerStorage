@@ -36,6 +36,7 @@ class CfgMods
 };
 
 // Rifles attach to custom weapon slots
+// Not having "shoulder" or "melee", breaks those slots
 class cfgWeapons
 {
 	class RifleCore;
@@ -78,7 +79,7 @@ class CfgVehicles
 		allowOwnedCargoManipulation=1;
 		attachments[]=
 		{
-			"Shoulder",
+			"Shoulder1",
 			"Shoulder2",
 			"Shoulder3",
 			"Shoulder4",
@@ -141,7 +142,7 @@ class CfgVehicles
 				name="Rifles";
 				attachmentSlots[]=
 				{
-					"Shoulder",
+					"Shoulder1",
 					"Shoulder2",
 					"Shoulder3",
 					"Shoulder4"
