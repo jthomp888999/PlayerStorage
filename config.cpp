@@ -35,6 +35,7 @@ class CfgMods
 	};
 };
 
+// Rifles attach to custom weapon slots
 class cfgWeapons
 {
 	class RifleCore;
@@ -53,7 +54,7 @@ class cfgWeapons
 	};
 };
 
-//Pistol base class for all custom lockers
+// Pistol base class for all custom lockers
 class CfgVehicles
 {
 	class Container_Base;
@@ -184,6 +185,38 @@ class CfgVehicles
 
 };
 
+// For when proxies are done
+// class CfgNonAIVehicles
+// {
+// 	class ProxyAttachment;
+// 	class Proxyshoulder1: ProxyAttachment
+// 	{
+// 		scope=2;
+// 		inventorySlot="Shoulder1";
+// 		model="";
+// 	};
+// 	class Proxyshoulder2: ProxyAttachment
+// 	{
+// 		scope=2;
+// 		inventorySlot="Shoulder2";
+// 		model="";
+// 	};
+// 	class Proxyshoulder3: ProxyAttachment
+// 	{
+// 		scope=2;
+// 		inventorySlot="Shoulder3";
+// 		model="";
+// 	};
+// 	class Proxyshoulder4: ProxyAttachment
+// 	{
+// 		scope=2;
+// 		inventorySlot="Shoulder4";
+// 		model="";
+// 	};
+
+// };
+
+// Custom weapon slots
 class CfgSlots
 {
     class Slot_Gun1
