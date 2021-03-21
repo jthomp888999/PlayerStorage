@@ -35,101 +35,22 @@ class CfgMods
 	};
 };
 
-class CfgWeapons
+class cfgWeapons
 {
 	class RifleCore;
-	class PistolCore;
-    class Rifle_Base: RifleCore
-    {
-        inventorySlot[]=
-        {
+	class Rifle_Base: RifleCore
+	{
+		inventorySlot[]=
+		{
+
 			"Shoulder",
+			"Shoulder1",
+			"Shoulder2",
+			"Shoulder3",
+			"Shoulder4",
 			"Melee"
-            "Shoulder1",
-            "Shoulder2",
-            "Shoulder3",
-            "Shoulder4"
-        };
-    };
-
-    class Pistol_Base: PistolCore
-    {
-        inventorySlot[]=
-        {
-			"Pistol",
-            "Pistol1",
-            "Pistol2",
-            "Pistol3",
-            "Pistol4"
-        };
-    };
-};
-
-class CfgSlots
-{
-    class Slot_Shoulder1
-    {
-        name="Shoulder1";
-        displayName="Shoulder1";
-        ghostIcon="shoulderleft";
-		show="true";
-    };
-
-    class Slot_Shoulder2
-    {
-        name="Shoulder2";
-        displayName="Shoulder2";
-        ghostIcon="shoulderleft";
-		show="true";
-    };
-
-    class Slot_Shoulder3
-    {
-        name="Shoulder3";
-        displayName="Shoulder3";
-        ghostIcon="shoulderleft";
-		show="true";
-    };
-
-    class Slot_Shoulder4
-    {
-        name="Shoulder4";
-        displayName="Shoulder4";
-        ghostIcon="shoulderleft";
-		show="true";
-    };
-
-    class Slot_Pistol1
-    {
-        name="Pistol1";
-        displayName="Pistol1";
-        ghostIcon="pistol";
-		show="true";
-    };
-
-    class Slot_Pistol2
-    {
-        name="Pistol2";
-        displayName="Pistol2";
-        ghostIcon="pistol";
-		show="true";
-    };
-
-    class Slot_Pistol3
-    {
-        name="Pistol3";
-        displayName="Pistol3";
-        ghostIcon="pistol";
-		show="true";
-    };
-
-    class Slot_Pistol4
-    {
-        name="Pistol4";
-        displayName="Pistol4";
-        ghostIcon="pistol";
-		show="true";
-    };
+		};
+	};
 };
 
 //Pistol base class for all custom lockers
@@ -157,18 +78,15 @@ class CfgVehicles
 		attachments[]=
 		{
 			"Shoulder",
-			"Shoulder1",
 			"Shoulder2",
 			"Shoulder3",
 			"Shoulder4",
 			"Pistol",
-            "Pistol1",
 			"VestGrenadeA",
 			"VestGrenadeB",
 			"VestGrenadeC",
 			"VestGrenadeD",
 			"Magazine",
-			"Melee",
 			"Head",
 			"Headgear",
 			"Mask",
@@ -264,4 +182,36 @@ class CfgVehicles
 
     };
 
+};
+
+class CfgSlots
+{
+    class Slot_Gun1
+	{
+		name="shoulder1";
+		displayName="shoulder1";
+		ghostIcon="shoulderleft";
+		selection="shoulder1";
+	};
+	class Slot_Gun2
+	{
+		name="shoulder2";
+		displayName="shoulder2";
+		ghostIcon="shoulderleft";
+		selection="shoulder2";
+	};
+	class Slot_Gun3
+	{
+		name="shoulder3";
+		displayName="shoulder3";
+		ghostIcon="shoulderleft";
+		selection="shoulder3";
+	};
+	class Slot_Gun4
+	{
+		name="shoulder4";
+		displayName="shoulder4";
+		ghostIcon="shoulderleft";
+		selection="shoulder4";
+	};
 };
