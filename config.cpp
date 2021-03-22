@@ -79,6 +79,7 @@ class CfgVehicles
 		allowOwnedCargoManipulation=1;
 		attachments[]=
 		{
+			"Shoulder",
 			"Shoulder1",
 			"Shoulder2",
 			"Shoulder3",
@@ -142,7 +143,7 @@ class CfgVehicles
 				name="Rifles";
 				attachmentSlots[]=
 				{
-					"Shoulder1",
+					"Shoulder",
 					"Shoulder2",
 					"Shoulder3",
 					"Shoulder4"
@@ -226,6 +227,7 @@ class CfgSlots
 		displayName="shoulder1";
 		ghostIcon="shoulderleft";
 		selection="shoulder1";
+		show="true";
 	};
 	class Slot_Gun2
 	{
@@ -233,6 +235,7 @@ class CfgSlots
 		displayName="shoulder2";
 		ghostIcon="shoulderleft";
 		selection="shoulder2";
+		show="true";
 	};
 	class Slot_Gun3
 	{
@@ -240,6 +243,7 @@ class CfgSlots
 		displayName="shoulder3";
 		ghostIcon="shoulderleft";
 		selection="shoulder3";
+		show="true";
 	};
 	class Slot_Gun4
 	{
@@ -247,5 +251,6 @@ class CfgSlots
 		displayName="shoulder4";
 		ghostIcon="shoulderleft";
 		selection="shoulder4";
+		show="true";
 	};
 };
