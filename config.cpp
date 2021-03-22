@@ -106,6 +106,21 @@ class CfgVehicles
 
 		 class GUIInventoryAttachmentsProps
 		{
+			class Accessories
+			{
+				name="Accessories";
+				attachmentSlots[]=
+				{
+					"Gloves",
+					"Feet",
+					"Hips",
+					"Eyewear",
+					"Mask",
+					"WalkieTalkie"
+				};
+				icon="missing";
+			};
+
 			class Clothing
 			{
 				name="Clothing";
@@ -118,21 +133,6 @@ class CfgVehicles
 					"Back",
 					"Headgear",
 					"Armband"
-				};
-				icon="missing";
-			};
-
-			class Accessories
-			{
-				name="Accessories";
-				attachmentSlots[]=
-				{
-					"Gloves",
-					"Feet",
-					"Hips",
-					"Eyewear",
-					"Mask",
-					"WalkieTalkie"
 				};
 				icon="missing";
 			};
