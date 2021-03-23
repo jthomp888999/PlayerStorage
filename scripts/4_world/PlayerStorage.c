@@ -1,6 +1,6 @@
 // Most basic setup from what I can tell,
 // can add more logic and features anytime
-class Craftable_Locker: DeployableContainer_Base
+class PlayerStorage: DeployableContainer_Base
 {
    override bool IsContainer()
     {
