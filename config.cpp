@@ -1,10 +1,10 @@
 class CfgPatches
 {
-	class CraftableLocker
+	class PlayerStorage
 	{
 		units[]=
 		{ 
-			"Craftable_Locker" 
+			"PlayerStorage" 
 		};
 		
 		requiredAddons[] =
@@ -27,8 +27,7 @@ class CfgMods
 				value="";
 				files[]=
 				{
-					"craftable_locker/scripts/Common",
-					"craftable_locker/scripts/4_World"
+					"PlayerStorage/scripts/4_World"
 				};
 			};
 		};
@@ -59,12 +58,12 @@ class cfgWeapons
 class CfgVehicles
 {
 	class Container_Base;
-	class Craftable_Locker: Container_Base
+	class PlayerStorage: Container_Base
 	{
-        displayName="Crafted_Locker";
+        displayName="Player Storage";
 		scope=2;
 		descriptionShort="Simple Crafted Storage Unit";
-		model="\craftable_locker\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
+		model="\PlayerStorage\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
 		weight=10000;
 		itemSize[]={5,15};
 		itemBehaviour=2;
