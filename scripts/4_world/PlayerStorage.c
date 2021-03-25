@@ -2,14 +2,78 @@
 // can add more logic and features anytime
 class PlayerStorage: DeployableContainer_Base
 {
-   override bool IsContainer()
+	protected ref OpenableBehaviour m_OPOpenable;
+
+	void PlayerStorage()
+    {   
+        m_OPOpenable = new OpenableBehaviour(false);
+        RegisterNetSyncVariableBool("m_OPOpenable.m_IsOpened");
+        RegisterNetSyncVariableBool("m_IsSoundSynchRemote");
+        RegisterNetSyncVariableBool("m_IsPlaceSound");
+    }
+
+	override void EEInit()
     {
-        return true; 
+        super.EEInit();
+        GetInventory().LockInventory(HIDE_INV_FROM_SCRIPT);
+    }
+
+	override void Open()
+    {
+        m_OPOpenable.Open();
+        GetInventory().UnlockInventory(HIDE_INV_FROM_SCRIPT);
+        SoundSynchRemote();
+    }
+
+	override void Close()
+    {
+        m_OPOpenable.Close();
+        GetInventory().LockInventory(HIDE_INV_FROM_SCRIPT);
+        SoundSynchRemote();
+    }
+
+	override bool IsOpen()
+    {
+        return m_OPOpenable.IsOpened();
     }
 
 	override bool CanPutInCargo( EntityAI parent )
 	{
-		return true;
+        return IsOpen();
+	}
+
+	override void OnVariablesSynchronized()
+    {
+        super.OnVariablesSynchronized();
+                
+        if ( IsPlaceSound() )
+        {
+            PlayPlaceSound();
+        }
+        else
+        {
+            if ( IsOpen() && IsSoundSynchRemote() && !IsBeingPlaced() )
+            {
+                SoundBarrelOpenPlay();
+            }
+            
+            if ( !IsOpen() && IsSoundSynchRemote() && !IsBeingPlaced() )
+            {
+                SoundBarrelClosePlay();
+            }
+        }   
+    }
+
+	void SoundBarrelOpenPlay()
+	{
+		EffectSound sound =	SEffectManager.PlaySound( "barrel_open_SoundSet", GetPosition() );
+		sound.SetSoundAutodestroy( true );
+	}
+
+	void SoundBarrelClosePlay()
+	{
+		EffectSound sound =	SEffectManager.PlaySound( "barrel_close_SoundSet", GetPosition() );
+		sound.SetSoundAutodestroy( true );
 	}
 
     override void OnPlacementComplete( Man player, vector position = "0 0 0", vector orientation = "0 0 0" )
@@ -30,6 +94,8 @@ class PlayerStorage: DeployableContainer_Base
         
         AddAction(ActionTogglePlaceObject);
         AddAction(ActionPlaceObject);
+		AddAction(ActionCloseStorage);
+        AddAction(ActionOpenStorage);
     }
 
     override bool CanReceiveAttachment( EntityAI attachment, int slotId )
