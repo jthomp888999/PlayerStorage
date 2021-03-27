@@ -57,6 +57,7 @@ class cfgWeapons
 // Pistol base class for all custom lockers
 class CfgVehicles
 {
+	class Inventory_Base;
 	class Container_Base;
 	class PlayerStorage: Container_Base
 	{
@@ -64,18 +65,13 @@ class CfgVehicles
 		scope=2;
 		descriptionShort="Simple Crafted Storage Unit";
 		model="\PlayerStorage\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
-		weight=10000;
+		weight=6000;
 		itemSize[]={5,15};
 		itemBehaviour=2;
 		canBeDigged=0;
         heavyItem=1;
         physLayer="item_large";
-        bounding="BSphere";
         carveNavmesh=1;
-        slopeTolerance=0.2;
-        yawPitchRollLimit[]={12,12,12};
-        placement="ForceSlopeOnTerrain";
-		allowOwnedCargoManipulation=1;
 		attachments[]=
 		{
 			"Shoulder",
@@ -183,6 +179,27 @@ class CfgVehicles
 		};
 
     };
+
+	class PlayerStorage_Holo: PlayerStorage
+	{
+		scope=2;
+		model="\PlayerStorage\Gun_Cabinet_1\Gun_Cabinet_1_model.p3d";
+		physLayer="item_small";
+	};
+
+	class PlayerStorage_Kit: Inventory_Base
+	{
+		scope=2;
+		model="\DZ\gear\camping\wooden_case.p3d";
+		displayName="Player Storage Kit";
+		descriptionShort="Contains a new player storage kit.";
+		itemSize[]={4,10};
+		carveNavmesh=1;
+		canBeDigged=0;
+		physLayer="item_small";
+		weight=6000;
+		itemBehaviour=2;
+	};
 
 };
 
