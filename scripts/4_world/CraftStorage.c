@@ -43,7 +43,7 @@ class CraftStorage extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("PlayerStorage");//add results here
+		AddResult("PlayerStorage_Kit");//add results here
 
 		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 1;//-1 = do nothing
