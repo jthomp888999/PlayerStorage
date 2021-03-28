@@ -1,8 +1,8 @@
-class CraftStorage extends RecipeBase
+class DeconstructStorage extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "Craft Player Storage";
+		m_Name = "Take Apart Player Storage";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 1;//animation length in relative time units
 		m_Specialty = 0.02;// value > 0 for roughness, value < 0 for precision
@@ -18,13 +18,13 @@ class CraftStorage extends RecipeBase
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = -1;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 10;//-1 = disable check
+		m_MinQuantityIngredient[1] = 1;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"Pliers");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Screwdriver");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -33,7 +33,7 @@ class CraftStorage extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"MetalPlate");//you can insert multiple ingredients this way
+		InsertIngredient(1,"PlayerStorage");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1;// -1 = do nothing

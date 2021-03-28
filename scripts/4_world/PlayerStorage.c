@@ -1,15 +1,24 @@
 // Most basic setup from what I can tell,
 // can add more logic and features anytime
-class PlayerStorage: DeployableContainer_Base
+class PlayerStorage: Container_Base
 {
 	protected ref OpenableBehaviour m_OPOpenable;
+
+    override bool CanPutInCargo( EntityAI parent )
+    {
+        return IsOpen();
+    }
+    
+    override bool CanPutIntoHands(EntityAI parent)
+    {
+        return false;
+    }
 
 	void PlayerStorage()
     {   
         m_OPOpenable = new OpenableBehaviour(false);
         RegisterNetSyncVariableBool("m_OPOpenable.m_IsOpened");
         RegisterNetSyncVariableBool("m_IsSoundSynchRemote");
-        RegisterNetSyncVariableBool("m_IsPlaceSound");
     }
 
 	override void EEInit()
@@ -36,11 +45,6 @@ class PlayerStorage: DeployableContainer_Base
     {
         return m_OPOpenable.IsOpened();
     }
-
-	override bool CanPutInCargo( EntityAI parent )
-	{
-        return IsOpen();
-	}
 
 	override void OnVariablesSynchronized()
     {
@@ -76,28 +80,6 @@ class PlayerStorage: DeployableContainer_Base
 		sound.SetSoundAutodestroy( true );
 	}
 
-    override void OnPlacementComplete( Man player, vector position = "0 0 0", vector orientation = "0 0 0" )
-    {
-        super.OnPlacementComplete( player, position, orientation );
-            
-        SetIsPlaceSound( true );
-    }
-
-    override bool IsDeployable()
-    {
-        return true;
-    }
-
-    override void SetActions()
-    {
-        super.SetActions();
-        
-        AddAction(ActionTogglePlaceObject);
-        AddAction(ActionPlaceObject);
-		AddAction(ActionCloseStorage);
-        AddAction(ActionOpenStorage);
-    }
-
     override bool CanReceiveAttachment( EntityAI attachment, int slotId )
 	{
 		if ( GetHealthLevel() == GameConstants.STATE_RUINED )
@@ -129,4 +111,59 @@ class PlayerStorage: DeployableContainer_Base
 
 		return super.CanLoadItemIntoCargo( item );
 	}
+
+    override void SetActions()
+    {
+        super.SetActions();
+        
+		AddAction(ActionCloseStorage);
+        AddAction(ActionOpenStorage);
+    }
+};
+
+class PlayerStorage_Holo extends PlayerStorage {};
+
+class PlayerStorage_Kit extends ItemBase
+{
+    protected Object StorageKit;
+
+    void PlayerStorage_Kit()
+    {
+        RegisterNetSyncVariableBool("m_IsSoundSynchRemote");
+    }
+
+    override void EEInit()
+	{
+		super.EEInit();
+	}
+
+    override void OnPlacementComplete( Man player, vector position = "0 0 0", vector orientation = "0 0 0" )
+    {
+        super.OnPlacementComplete( player, position, orientation );
+
+        PlayerBase pb = PlayerBase.Cast( player );
+        if ( GetGame().IsServer() )
+        {
+            PlayerBase player_base = PlayerBase.Cast( player );
+			StorageKit = GetGame().CreateObject("PlayerStorage", pb.GetLocalProjectionPosition(), false );
+			StorageKit.SetPosition( position );
+			StorageKit.SetOrientation( orientation );
+            this.Delete();
+        }
+
+        SetIsPlaceSound( true );
+    }
+
+    override bool IsDeployable()
+    {
+        return true;
+    }
+
+    override void SetActions()
+    {
+        super.SetActions();
+        
+        AddAction(ActionTogglePlaceObject);
+        AddAction(ActionPlaceObject);
+    }
 };
