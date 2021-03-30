@@ -100,7 +100,7 @@ class CfgVehicles
 			"WalkieTalkie"
 		};
 
-		 class GUIInventoryAttachmentsProps
+		class GUIInventoryAttachmentsProps
 		{
 			class Accessories
 			{
@@ -176,6 +176,17 @@ class CfgVehicles
 			itemsCargoSize[]={10,2};
 			openable=0;
 			allowOwnedCargoManipulation=1;
+		};
+
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100000000000;
+				};
+			};
 		};
 
     };
